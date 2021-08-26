@@ -1,0 +1,2 @@
+# Kattis Submissions
+#### Adam Grady
