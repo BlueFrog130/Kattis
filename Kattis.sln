@@ -12,17 +12,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolvingForCarrots", "SolvingForCarrots\SolvingForCarrots.csproj", "{791E9C27-56EA-4E29-999A-6BE2A6103F9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolvingForCarrots", "SolvingForCarrots\SolvingForCarrots.csproj", "{791E9C27-56EA-4E29-999A-6BE2A6103F9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pet", "Pet\Pet.csproj", "{43E90607-F736-451C-91BC-7AB83D03C813}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pet", "Pet\Pet.csproj", "{43E90607-F736-451C-91BC-7AB83D03C813}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tarifa", "Tarifa\Tarifa.csproj", "{3505457F-D637-4846-9136-F8B1E0298708}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tarifa", "Tarifa\Tarifa.csproj", "{3505457F-D637-4846-9136-F8B1E0298708}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Echo Echo Echo", "Echo Echo Echo\Echo Echo Echo.csproj", "{30FFC282-E925-4960-BCB2-90645C1FB641}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Echo Echo Echo", "Echo Echo Echo\Echo Echo Echo.csproj", "{30FFC282-E925-4960-BCB2-90645C1FB641}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeTwoStones", "TakeTwoStones\TakeTwoStones.csproj", "{D2012635-CE7C-4048-A036-63DDFC7B7FE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakeTwoStones", "TakeTwoStones\TakeTwoStones.csproj", "{D2012635-CE7C-4048-A036-63DDFC7B7FE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabyNames", "BabyNames\BabyNames.csproj", "{E6D32EEE-3A4D-4A8C-86E0-D9A5FE9A1AB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BabyNames", "BabyNames\BabyNames.csproj", "{E6D32EEE-3A4D-4A8C-86E0-D9A5FE9A1AB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedLimit", "SpeedLimit\SpeedLimit.csproj", "{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apaxiaaaaaaaaaaaans", "Apaxiaaaaaaaaaaaans\Apaxiaaaaaaaaaaaans.csproj", "{97B9F601-5F93-459D-B82C-35E2B905385C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -130,6 +134,30 @@ Global
 		{E6D32EEE-3A4D-4A8C-86E0-D9A5FE9A1AB4}.Release|x64.Build.0 = Release|Any CPU
 		{E6D32EEE-3A4D-4A8C-86E0-D9A5FE9A1AB4}.Release|x86.ActiveCfg = Release|Any CPU
 		{E6D32EEE-3A4D-4A8C-86E0-D9A5FE9A1AB4}.Release|x86.Build.0 = Release|Any CPU
+		{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}.Debug|x64.Build.0 = Debug|Any CPU
+		{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}.Debug|x86.Build.0 = Debug|Any CPU
+		{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}.Release|x64.ActiveCfg = Release|Any CPU
+		{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}.Release|x64.Build.0 = Release|Any CPU
+		{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}.Release|x86.ActiveCfg = Release|Any CPU
+		{BAB96362-6ABA-4BD0-AEBF-0AC4A0B01B45}.Release|x86.Build.0 = Release|Any CPU
+		{97B9F601-5F93-459D-B82C-35E2B905385C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B9F601-5F93-459D-B82C-35E2B905385C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B9F601-5F93-459D-B82C-35E2B905385C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{97B9F601-5F93-459D-B82C-35E2B905385C}.Debug|x64.Build.0 = Debug|Any CPU
+		{97B9F601-5F93-459D-B82C-35E2B905385C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{97B9F601-5F93-459D-B82C-35E2B905385C}.Debug|x86.Build.0 = Debug|Any CPU
+		{97B9F601-5F93-459D-B82C-35E2B905385C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B9F601-5F93-459D-B82C-35E2B905385C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97B9F601-5F93-459D-B82C-35E2B905385C}.Release|x64.ActiveCfg = Release|Any CPU
+		{97B9F601-5F93-459D-B82C-35E2B905385C}.Release|x64.Build.0 = Release|Any CPU
+		{97B9F601-5F93-459D-B82C-35E2B905385C}.Release|x86.ActiveCfg = Release|Any CPU
+		{97B9F601-5F93-459D-B82C-35E2B905385C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
