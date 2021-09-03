@@ -1,23 +1,37 @@
 ﻿using System;
+using System.Linq;
 
 namespace Lektira
 {
-    /// <summary>
-    /// INCOMPLETE
-    /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
             string word = Console.ReadLine();
+            string best = word;
 
-            int third = word.Length / 3;
+            for (int i = 1; i < word.Length - 1; i++)
+            {
+                for (int j = i + 1; j < word.Length; j++)
+                {
+                    Check(word, ref best, i, j);
+                }
+            }
 
-            string p1 = word.Substring(0, third);
-            string p2 = word.Substring(third, third);
-            string p3 = word.Substring(2 * third, third);
+            Console.WriteLine(best);
+        }
 
-            Console.WriteLine(p1 + p2 + p3);
+        static void Check(string s, ref string best, int i, int j)
+        {
+            string p1 = new string(s.Substring(0, i).Reverse().ToArray());
+            string p2 = new string(s.Substring(i, j - i).Reverse().ToArray());
+            string p3 = new string(s.Substring(j).Reverse().ToArray());
+
+            string reversed = string.Concat(p1, p2, p3);
+
+            int compare = string.Compare(reversed, best);
+            if (compare < 0)
+                best = reversed;
         }
     }
 }
