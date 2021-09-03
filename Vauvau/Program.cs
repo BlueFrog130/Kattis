@@ -17,8 +17,25 @@ namespace Vauvau
             // [P M G]
             IEnumerable<int> pmg = Console.ReadLine().Split(" ").Select(n => int.Parse(n));
 
+            IEnumerable<int> dogeAtt1 = pmg.Select(x => d1.IsAgro(x));
+            IEnumerable<int> dogeAtt2 = pmg.Select(x => d2.IsAgro(x));
 
-
+            IEnumerable<int> attacks = dogeAtt1.Select((a, i) => a + dogeAtt2.ElementAt(i));
+            foreach (int i in attacks)
+            {
+                switch (i)
+                {
+                    case 2:
+                        Console.WriteLine("both");
+                        break;
+                    case 1:
+                        Console.WriteLine("one");
+                        break;
+                    default:
+                        Console.WriteLine("none");
+                        break;
+                }
+            }
         }
 
         class Doge
@@ -26,20 +43,20 @@ namespace Vauvau
             public int Aggressive { get; }
             public int Calm { get; }
 
+            public int Interval => Aggressive + Calm;
+
             public Doge(int a, int c)
             {
                 Aggressive = a;
                 Calm = c;
             }
 
-            public bool IsAgro(int time)
+            public int IsAgro(int time)
             {
-                int t = 0;
-                bool agro = true;
-                while (true)
-                {
-
-                }
+                int t = time % Interval;
+                if (t == 0 || t > Aggressive)
+                    return 0;
+                return 1;
             }
         }
     }
