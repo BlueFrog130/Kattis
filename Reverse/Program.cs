@@ -2,6 +2,9 @@
 
 namespace Reverse
 {
+    /// <summary>
+    /// https://open.kattis.com/contests/jwkx6j/problems/ofugsnuid
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace SMIL
 {
+    /// <summary>
+    /// https://open.kattis.com/contests/jwkx6j/problems/smil
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
