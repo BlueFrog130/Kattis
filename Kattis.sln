@@ -84,6 +84,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimePath", "PrimePath\Prim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineThemUp", "LineThemUp\LineThemUp.csproj", "{A01B0BB1-0379-44EA-A2D9-EF3D993F2CFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusLines", "BusLines\BusLines.csproj", "{9411C5E5-85F8-400F-9DB6-04D916A658EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -550,6 +552,18 @@ Global
 		{A01B0BB1-0379-44EA-A2D9-EF3D993F2CFE}.Release|x64.Build.0 = Release|Any CPU
 		{A01B0BB1-0379-44EA-A2D9-EF3D993F2CFE}.Release|x86.ActiveCfg = Release|Any CPU
 		{A01B0BB1-0379-44EA-A2D9-EF3D993F2CFE}.Release|x86.Build.0 = Release|Any CPU
+		{9411C5E5-85F8-400F-9DB6-04D916A658EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9411C5E5-85F8-400F-9DB6-04D916A658EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9411C5E5-85F8-400F-9DB6-04D916A658EE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9411C5E5-85F8-400F-9DB6-04D916A658EE}.Debug|x64.Build.0 = Debug|Any CPU
+		{9411C5E5-85F8-400F-9DB6-04D916A658EE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9411C5E5-85F8-400F-9DB6-04D916A658EE}.Debug|x86.Build.0 = Debug|Any CPU
+		{9411C5E5-85F8-400F-9DB6-04D916A658EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9411C5E5-85F8-400F-9DB6-04D916A658EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9411C5E5-85F8-400F-9DB6-04D916A658EE}.Release|x64.ActiveCfg = Release|Any CPU
+		{9411C5E5-85F8-400F-9DB6-04D916A658EE}.Release|x64.Build.0 = Release|Any CPU
+		{9411C5E5-85F8-400F-9DB6-04D916A658EE}.Release|x86.ActiveCfg = Release|Any CPU
+		{9411C5E5-85F8-400F-9DB6-04D916A658EE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
