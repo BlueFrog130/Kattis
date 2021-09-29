@@ -12,6 +12,7 @@ namespace PrimePath
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
+
             for (int i = 0; i < n; i++)
             {
                 string[] split = Console.ReadLine().Split();
@@ -27,7 +28,7 @@ namespace PrimePath
         }
 
         static int Cost(int from, int to)
-        {
+                {
             if (from == to)
                 return 0;
             Dictionary<int, int> nodes = new Dictionary<int, int>();
@@ -36,7 +37,7 @@ namespace PrimePath
             queue.Enqueue(from);
 
             while (queue.Count > 0)
-            {
+                    {
                 int u = queue.Dequeue();
                 nodes.TryGetValue(u, out int currentDepth);
                 IEnumerable<int> primes = u.AdjacentPrimes();
@@ -49,7 +50,11 @@ namespace PrimePath
                         nodes.Add(prime, currentDepth + 1);
                         queue.Enqueue(prime);
                     }
+                    IEnumerable<int> primes = possibilities.Where(x => x.IsPrime());
+                    if (primes.Count() > 1)
+                        Console.WriteLine($"{current} has more than 1 possible number");
                 }
+                Console.WriteLine(steps);
             }
             return -1;
         }
@@ -66,7 +71,7 @@ namespace PrimePath
                 nums.AddRange(digitPrimes);
             }
             return nums;
-        }
+            }
 
         static int DigitAt(this int num, int x)
         {
