@@ -12,7 +12,6 @@ namespace PrimePath
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-
             for (int i = 0; i < n; i++)
             {
                 string[] split = Console.ReadLine().Split();
@@ -50,11 +49,7 @@ namespace PrimePath
                         nodes.Add(prime, currentDepth + 1);
                         queue.Enqueue(prime);
                     }
-                    IEnumerable<int> primes = possibilities.Where(x => x.IsPrime());
-                    if (primes.Count() > 1)
-                        Console.WriteLine($"{current} has more than 1 possible number");
                 }
-                Console.WriteLine(steps);
             }
             return -1;
         }
