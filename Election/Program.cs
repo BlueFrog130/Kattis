@@ -12,29 +12,33 @@ namespace Election
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            Dictionary<string, string> candidateParities = Enumerable.Range(0, n)
-                .Select(i => Tuple.Create(Console.ReadLine(), Console.ReadLine()))
-                .ToDictionary(k => k.Item1, v =>v.Item2.Equals("independent") ? Guid.NewGuid().ToString() : v.Item2);
-            Dictionary<string, int> partyVotes = candidateParities.Values.ToDictionary(k => k, v => 0);
+            Dictionary<string, Candidate> candidates = new Dictionary<string, Candidate>();
+            for (int i = 0; i < n; i++)
+            {
+                string name = Console.ReadLine();
+                candidates.Add(name, new Candidate(name, Console.ReadLine()));
+            }
             int m = int.Parse(Console.ReadLine());
             for (int i = 0; i < m; i++)
-            {
-                candidateParities.TryGetValue(Console.ReadLine(), out string party);
-                if (string.IsNullOrEmpty(party))
-                    continue;
-                partyVotes[party]++;
-            }
-            int max = partyVotes.Values.Max();
-            int winnerCount = partyVotes.Values.Count(v => v == max);
-            if (winnerCount > 1)
+                if (candidates.TryGetValue(Console.ReadLine(), out Candidate candidate))
+                    candidate.Votes++;
+            Candidate winner = candidates.Values.Aggregate((a, b) => a.Votes > b.Votes ? a : b);
+            if (candidates.Values.Count(c => c.Votes == winner.Votes) > 1)
                 Console.WriteLine("tie");
             else
+                Console.WriteLine(winner.Party);
+        }
+
+        class Candidate
+        {
+            public readonly string Name;
+            public readonly string Party;
+            public int Votes;
+            public Candidate(string name, string party)
             {
-                string winner = partyVotes.Aggregate((a, b) => a.Value > b.Value ? a : b).Key;
-                if (Guid.TryParse(winner, out Guid guid))
-                    Console.WriteLine("independnet");
-                else
-                    Console.WriteLine(winner);
+                Name = name;
+                Party = party;
+                Votes = 0;
             }
         }
     }

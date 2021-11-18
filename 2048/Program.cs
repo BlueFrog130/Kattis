@@ -32,7 +32,7 @@ namespace _2048
         public static bool IsHorizontal(this Direction direction) => (int)direction % 2 == 0;
     }
 
-    class Board
+    public class Board
     {
         private readonly int size;
         private readonly int[,] state;
@@ -116,7 +116,7 @@ namespace _2048
         }
     }
 
-    enum Direction
+    public enum Direction
     {
         UP = 1,
         LEFT,
