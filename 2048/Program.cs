@@ -29,7 +29,7 @@ namespace _2048
         }
     }
 
-    class Board
+    public class Board
     {
         private int[,] state;
         private Random random = new Random();
@@ -75,7 +75,7 @@ namespace _2048
         }
     }
 
-    enum Direction
+    public enum Direction
     {
         UP,
         DOWN,
