@@ -27,15 +27,20 @@ namespace _2048
                 _ => Point.Empty,
             };
         }
+
+        public static bool IsVertical(this Direction direction) => (int)direction % 2 == 1;
+        public static bool IsHorizontal(this Direction direction) => (int)direction % 2 == 0;
     }
 
     class Board
     {
-        private int[,] state;
-        private Random random = new Random();
+        private readonly int size;
+        private readonly int[,] state;
+        private readonly Random random = new Random();
 
         public Board(int size = 4)
         {
+            this.size = size;
             state = new int[size, size];
         }
 
@@ -43,19 +48,13 @@ namespace _2048
         {
             List<Point> empty = new List<Point>();
             for (int i = 0; i < state.GetLength(0); i++)
-            {
                 for (int j = 0; j < state.GetLength(0); j++)
-                {
                     if (state[i, j] == 0)
-                    {
                         empty.Add(new Point(i, j));
-                    }
-                }
-            }
             return empty;
         }
 
-        public void AddSquare()
+        public void FillRandom()
         {
             IEnumerable<Point> possible = EmptySpaces();
             Point rand = possible.ElementAt(random.Next(0, possible.Count()));
@@ -68,18 +67,60 @@ namespace _2048
 
         }
 
-        public void Shift((int, int) coord, Direction direction)
+        private void Shift(Point coord, Direction direction)
         {
-            var (x, y) = coord;
+            for (int i = Edge(direction); i < size; i++)
+            {
+                for (int j = Edge(direction); j < size; j++)
+                {
+
+                }
+            }
             
+        }
+
+        /// <summary>
+        /// Swaps 2 points
+        /// </summary>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        private void Swap(Point p1, Point p2)
+        {
+            int tmp = state[p1.X, p1.Y];
+            state[p1.X, p1.Y] = state[p2.X, p2.Y];
+            state[p2.X, p2.Y] = tmp;
+        }
+
+        /// <summary>
+        /// Checks if this point is valid
+        /// </summary>
+        /// <param name="position"></param>
+        /// <returns></returns>
+        private bool IsValid(Point position)
+        {
+            return position.X >= 0 && position.Y >= 0 && position.X < state.Length && position.Y < state.Length && state[position.X, position.Y] == 0;
+        }
+
+        /// <summary>
+        /// Gets opposite edge in the direction specified
+        /// </summary>
+        /// <param name="direction"></param>
+        /// <returns></returns>
+        private int Edge(Direction direction)
+        {
+            return direction switch
+            {
+                Direction.LEFT or Direction.UP => 0,
+                _ => size,
+            };
         }
     }
 
     enum Direction
     {
-        UP,
-        DOWN,
+        UP = 1,
         LEFT,
+        DOWN,
         RIGHT
     }
 }
